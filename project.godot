@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/git_api.gdns"
+}, {
+"base": "VBoxContainer",
+"class": "json_dock",
+"language": "GDScript",
+"path": "res://addons/gd_json/JSON_dock.gd"
+} ]
+_global_script_class_icons={
+"GitAPI": "",
+"json_dock": ""
+}
+
+[application]
+
+config/name="GDJson"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "gd_json" )
+
+[gdnative]
+
+singletons=[ "res://addons/git_api.gdnlib", "res://git_api.gdnlib" ]
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
